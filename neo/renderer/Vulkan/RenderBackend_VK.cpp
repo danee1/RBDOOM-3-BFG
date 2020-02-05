@@ -598,8 +598,8 @@ static void CreateLogicalDeviceAndQueues()
 	deviceFeatures.imageCubeArray = VK_TRUE;
 	deviceFeatures.depthClamp = VK_TRUE;
 	deviceFeatures.depthBiasClamp = VK_TRUE;
-	deviceFeatures.depthBounds = VK_TRUE;
-	deviceFeatures.fillModeNonSolid = VK_TRUE;
+	/*deviceFeatures.depthBounds = VK_TRUE;
+	deviceFeatures.fillModeNonSolid = VK_TRUE;*/
 	deviceFeatures.samplerAnisotropy = vkcontext.physicalDeviceFeatures.samplerAnisotropy; // RB
 
 	VkDeviceCreateInfo info = {};
