@@ -1535,7 +1535,14 @@ void idRenderProgManager::CommitUniforms( uint64 stateBits )
 				imageInfo.imageView = image->GetView();
 				imageInfo.sampler = image->GetSampler();
 
-				assert( image->GetView() != VK_NULL_HANDLE );
+				//assert( image->GetView() != VK_NULL_HANDLE );
+
+				if ( image->GetView() == VK_NULL_HANDLE )
+				{
+					volatile int x = 0;
+					x++;
+					continue;
+				}
 
 				VkWriteDescriptorSet& write = writes[ writeIndex++ ];
 				memset( &write, 0, sizeof( VkWriteDescriptorSet ) );
